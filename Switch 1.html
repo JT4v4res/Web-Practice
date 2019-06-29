@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+</head>
+<body>
+	<div>
+		<form method="get" action="operaçao.php">
+			Número:<input type="number" name="num"/><br/>
+			<fieldset><legend>Operação</legend>
+				<input type="radio" name="oper" value="1" id="dobro" checked/>
+				<label id="dobro">Dobro</label>
+				<input type="radio" name="oper" value="2" id="cubo"/>
+				<label id="cubo">Cubo</label>
+				<input type="radio" name="oper" value="3" id="raiz"/>
+				<label id="raiz">Raiz Quadrada</label>
+			</fieldset>
+			<input type="submit" class="botao" name="Confirmar"/>
+		</form>
+	</div>
+</body>
+</html>

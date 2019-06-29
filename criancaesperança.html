@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+</head>
+<body>
+	<div>
+		<form method="get" action="criancaesperanca.php">
+			Nome:<input type="text" name="nome"/><br/>
+			
+			<!-- Inserção do valor a ser doado que será lido no documento php -->
+			<fieldset><legend>Valor</legend>
+				<input type="radio" name="valor" id="v1" value="1" checked/>
+				<label for="v1">Doar R$10</label><br/>
+				<input type="radio" name="valor" id="v2" value="2"/>
+				<label for="v2">Doar R$25</label><br/>
+				<input type="radio" name="valor" id="v3" value="3"/>
+				<label for="v3">Doar R$50</label><br/>
+			</fieldset>
+			<input type="submit" name="Envia" class="botao"/>
+		</form>
+	</div>
+</body>
+</html>

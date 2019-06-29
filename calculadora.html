@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+</head>
+<body>
+	<div>
+		<form method="get" action="calculadora.php">
+			Valor 1:<input type="number" name="v1"/><br/>
+			Valor 2:<input type="number" name="v2"/><br/>
+			<fieldset><legend>Operação</legend>
+				<input type="radio" name="op" id="soma" value="1" checked/>
+				<label for="soma">Somar</label><br/>
+				<input type="radio" name="op" id="sub" value="2"/>
+				<label for="sub">Subtrair</label><br/>
+				<input type="radio" name="op" id="mul" value="3"/>
+				<label for="mul">Multiplicar</label><br/>
+				<input type="radio" name="op" id="div" value="4"/>
+				<label for="div">Dividir</label><br/>
+				<input type="radio" name="op" id="pot" value="5"/>
+				<label for="pot">Pontenciação</label><br/>
+				<input type="radio" name="op" id="ra" value="6"/>
+				<label for="ra">Raiz Quadrada</label><br/>
+			</fieldset>
+			<input type="submit" name="Calcular" class="botao">
+		</form>
+	</div>
+</body>
+</html>
