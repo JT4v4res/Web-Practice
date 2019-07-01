@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Internet e Web</title>
+	<style type="text/css">
+		div {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function testa(input) {
+			var input = document.getElementById("cantor").value;
+
+			if (input == 'Chico') 
+			{
+				alert("Correto");
+			}
+			else
+			{
+				alert("Errado");
+			}
+		}
+	</script>
+</head>
+<body style="background-color: #000000">
+	<div>
+		<input type="text" name="nome" id="cantor" />
+		<input type="submit" onclick="testa()" value="Verificar Nome" />
+	</div>
+</body>
+</html>
