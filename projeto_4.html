@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Internet e Web</title>
+	<style type="text/css">
+		div {
+			text-align: center;
+		}
+
+		h1 {
+			text-align: center;
+			color: #FF4500;
+		}
+
+		p {
+			text-align: center;
+			color: #FF8C00;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function testa(input) {
+			var input = document.getElementById("cantor").value;
+
+			if (input == 'Chico') 
+			{
+				alert("Acertou! Chico é o Autor dessa Música!! :D");
+			}
+			else
+			{
+				alert("Você errou, esse não é o autor da música :(");
+			}
+		}
+	</script>
+</head>
+<body style="background-color: #000000">
+	<div>
+		<h1>Autor da música Cálice</h1>
+
+		<p>Quem é o autor da música Cálice?</p>
+		
+		<input type="text" name="nome" id="cantor" />
+		<input type="submit" onclick="testa()" value="Verificar Nome" />
+	</div>
+</body>
+</html>
