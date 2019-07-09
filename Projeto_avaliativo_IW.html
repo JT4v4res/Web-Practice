@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Projeto Avaliativo 1</title>
+	<style type="text/css">
+		h1 {
+			color: #BA55D3;
+			font-size: 50px;
+		}
+		div {
+			text-align: center;
+		}
+
+		p {
+			color: #FF8C00;
+			font-size: 30px;
+		}
+
+		input {
+			font-size: 20px;
+		}
+
+		.est {
+			background-color: #008000;
+			color: #000000;
+		}
+	</style>
+	<script type="text/javascript">
+		//Função que vai gerar o número aleatório
+		function numero_aleatorio() {
+			input_jogador = document.forms[0].nome.value;
+			input_idade_jogador = document.forms[0].idade.value;
+
+			input_jogador2 = document.forms[0].nome2.value;
+			input_idade_jogador2 = document.forms[0].idade2.value;
+
+			numero_random = Math.floor(Math.random() * 20 + 1);
+
+			jogo(numero_random, input_jogador, input_idade_jogador, input_jogador2, input_idade_jogador2, 0, 0, 0);
+		}
+
+		//Função que vai comparar os números e se repetir, até haver 1 vencedor
+		function jogo(numero_random, input_jogador, input_idade_jogador, input_jogador2, input_idade_jogador2, loops, vez_jogador, vez_jogador2) {
+			
+			vez_jogador = prompt("Digite um numero entre 1 e 20:");
+				
+			vez_jogador2 = prompt("Digite um numero entre 1 e 20:");
+
+			//Condição de parada
+			if (vez_jogador == numero_random || vez_jogador2 == numero_random) {
+				//Verificação de vencedor, junto com mostra do resultado do jogo
+				if (vez_jogador == numero_random) {
+					window.alert("O vencedor é " + input_jogador + " ,de " + input_idade_jogador + " anos, com 1 acerto de " + loops + " erros");
+					window.alert("O perdedor é " + input_jogador2);
+
+					return 0;
+				}
+				if (vez_jogador2 == numero_random) {
+					window.alert("O vencedor é " + input_jogador2 + " ,de " + input_idade_jogador2 + " anos, com 1 acerto de " + loops + " erros");
+					window.alert("O perdedor é " + input_jogador);
+
+					return 0; 
+				}
+			}
+			else{
+				//Condições para a dica
+				if (vez_jogador > numero_random) {
+					window.alert(input_jogador+ ", Digite um número menor!");
+				}
+				
+				if (vez_jogador < numero_random) {
+					window.alert(input_jogador+ ", Digite um número maior!");
+				}
+
+				if (vez_jogador2 > numero_random) {
+					window.alert(input_jogador2+ ", Digite um número menor!");
+				}
+				
+				if (vez_jogador2 < numero_random) {
+					window.alert(input_jogador2+", Digite um número maior!");
+				}
+				//Chamada recursiva
+				return jogo(numero_random, input_jogador, input_idade_jogador, input_jogador2, input_idade_jogador2, loops + 1, 0, 0);
+			}
+		}
+	</script>
+</head>
+<body style="background-color: #000000">
+	<div>
+		<h1>Bem vindo, usuário, vamos jogar! :)</h1>
+		<p>Faremos um jogo de adivinhação simples:<br/>Eu vou gerar um número aleatório e você terá que adivinhar! </p>
+		<!--Formulário para receber nomes e idades, e iniciar o jogo-->
+		<form>
+			<input type="text" name="nome" placeholder="Nome do Jogador 1" />
+			<input type="text" name="idade" placeholder="Idade do Jogador 1" /><br/><br/>
+			<input type="text" name="nome2" placeholder="Nome do Jogador 2" />
+			<input type="text" name="idade2" placeholder="Idade do Jogador 2" /><br/><br/>
+			<input type="submit" value="Iniciar o jogo!" onclick="numero_aleatorio()" class="est" />
+		</form>
+	</div>
+</body>
+</html>
